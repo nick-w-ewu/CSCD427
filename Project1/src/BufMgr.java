@@ -29,6 +29,10 @@ public class BufMgr
         int frame = mappings.lookup(page);
         if(frame != -1)
         {
+            if(this.freeFrames.contains(frame))
+            {
+                this.freeFrames.remove(frame);
+            }
             PageFrame toReturn = frames[frame];
             toReturn.addPin();
             return toReturn;
@@ -127,6 +131,17 @@ public class BufMgr
         catch (FileNotFoundException e)
         {
 
+        }
+    }
+
+    public void cleanUp()
+    {
+        for(PageFrame frame : this.frames)
+        {
+            if(frame.getDirty())
+            {
+                writePage(frame.getFrameNum());
+            }
         }
     }
 }
