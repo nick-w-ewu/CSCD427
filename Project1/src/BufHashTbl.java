@@ -6,12 +6,20 @@ import java.util.ListIterator;
  */
 public class BufHashTbl
 {
-    private LinkedList<PageMapper>[] mappings = new LinkedList[15];
+    private LinkedList<PageMapper>[] mappings = new LinkedList[4];
 
-    public void insert(int frame, int page)
+    public BufHashTbl()
+    {
+        for(int i = 0; i < mappings.length; i++)
+        {
+            mappings[i] = new LinkedList<PageMapper>();
+        }
+    }
+
+    public void insert(int page, int frame)
     {
         int index = page % mappings.length;
-        PageMapper temp = new PageMapper(frame, page);
+        PageMapper temp = new PageMapper(page, frame);
         if (!this.mappings[index].contains(temp))
         {
             this.mappings[index].addFirst(temp);
@@ -35,8 +43,19 @@ public class BufHashTbl
     public void remove(int page, int frame)
     {
         int index = page % mappings.length;
-        PageMapper temp = new PageMapper(frame, page);
+        PageMapper temp = new PageMapper(page, frame);
         this.mappings[index].remove(temp);
+    }
+
+    public void printTable()
+    {
+        for(LinkedList<PageMapper> list : mappings)
+        {
+            for(PageMapper p : list)
+            {
+                System.out.println(p.getPage() + ", " + p.getFrame());
+            }
+        }
     }
 
 }

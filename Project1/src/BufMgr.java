@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
@@ -12,13 +13,18 @@ public class BufMgr
 {
     private PageFrame[] frames;
     private BufHashTbl mappings;
-    private Queue<Integer> freeFrames;
+    private Queue<Integer> freeFrames = new LinkedList<>();
 
     public BufMgr(int numFrames, BufHashTbl m)
     {
         this.frames = new PageFrame[numFrames];
         this.mappings = m;
-        for(int i = 0; i < numFrames; i++)
+        int i;
+        for(i = 0; i < this.frames.length; i++)
+        {
+            this.frames[i] = new PageFrame(-1,-1);
+        }
+        for(i = 0; i < numFrames; i++)
         {
             freeFrames.add(i);
         }
@@ -69,7 +75,9 @@ public class BufMgr
             if(!frames[replace].getDirty())
             {
                 PageFrame newFrame = new PageFrame(replace, page);
-                this.mappings.insert(replace, page);
+                this.frames[replace] = newFrame;
+                this.mappings.insert(page, replace);
+                //fix
                 return replace;
             }
             else
@@ -78,18 +86,18 @@ public class BufMgr
                 this.mappings.remove(frames[replace].getPageNumber(), replace);
                 PageFrame newFrame = new PageFrame(replace, page);
                 this.frames[replace] = newFrame;
-                this.mappings.insert(replace, page);
+                this.mappings.insert(page, replace);
                 return replace;
             }
         }
         return -1;
     }
 
-    private void createPage(int page)
+    public void createPage(int page)
     {
         try
         {
-            PrintWriter writer = new PrintWriter(page+".txt");
+            PrintWriter writer = new PrintWriter("files/" + page+".txt");
             writer.println("This is Page " + page);
             writer.close();
         }
@@ -103,7 +111,7 @@ public class BufMgr
     {
         try
         {
-            PrintWriter writer = new PrintWriter(this.frames[frame].getPageNumber()+".txt");
+            PrintWriter writer = new PrintWriter("files/" + this.frames[frame].getPageNumber()+".txt");
             for(String s : this.frames[frame].getContents())
             {
                 writer.println(s);
@@ -120,9 +128,9 @@ public class BufMgr
     {
         try
         {
-            Scanner file = new Scanner(new File(this.frames[frame].getPageNumber()+".txt"));
+            Scanner file = new Scanner(new File("files/" + this.frames[frame].getPageNumber()+".txt"));
             ArrayList<String> contents = new ArrayList<>();
-            while(file.hasNextLine())
+            while(file.hasNext())
             {
                 contents.add(file.nextLine());
             }
