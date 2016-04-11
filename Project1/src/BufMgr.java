@@ -69,7 +69,6 @@ public class BufMgr
             this.freeFrames.remove(frame);
         }
         PageFrame toReturn = frames[frame];
-        toReturn.addPin();
         return toReturn;
     }
 
@@ -169,6 +168,14 @@ public class BufMgr
             {
                 writePage(frame.getFrameNum());
             }
+        }
+    }
+
+    public void printFrameTable()
+    {
+        for(int i = 0; i < this.frames.length; i++)
+        {
+            System.out.println("Frame: " + i + " " + this.frames[i].toString());
         }
     }
 }

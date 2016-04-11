@@ -80,4 +80,10 @@ public class PageFrame
     {
         this.contents = contents;
     }
+
+    public String toString()
+    {
+        String toReturn = "Page: " + this.pageNumber + " Dirty: " + this.dirty + " Pin: " + this.pinCount;
+        return toReturn;
+    }
 }

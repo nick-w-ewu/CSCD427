@@ -10,8 +10,8 @@ public class BufMgrTester
     public static void main(String[] args)
     {
         BufHashTbl mappings = new BufHashTbl();
-        BufMgr manager = new BufMgr(5, mappings);
-        Scanner input = new Scanner("System.in");
+        BufMgr manager = new BufMgr(4, mappings);
+        Scanner input = new Scanner(System.in);
         int userSelection = displayMenu(input), page;
 
         System.out.println(userSelection);
@@ -28,14 +28,15 @@ public class BufMgrTester
                     requestPage(page, manager);
                     break;
                 case 3:
-                    page = intInput(input, "Enter the page you wish to retrieve");
+                    page = intInput(input, "Enter the page you wish to update");
                     updatePage(page, manager, input);
                     break;
                 case 4:
-                    page = intInput(input, "Enter the page you wish to retrieve");
+                    page = intInput(input, "Enter the page you wish to release");
                     relinquishPage(page, manager);
                     break;
             }//end switch
+            manager.printFrameTable();
             userSelection = displayMenu(input);
         }//end while
         System.out.println("Thank You for using the Buffer Manager, we are cleaning up and exiting...");
@@ -60,6 +61,7 @@ public class BufMgrTester
 
     private static void readPageUpdate(PageFrame frame, Scanner input)
     {
+        input.nextLine();
         System.out.println("Enter the contents you would like to add to the file,\n when you are finished enter **");
         String toAdd = input.nextLine();
         while(!toAdd.equals("**"))
@@ -118,9 +120,9 @@ public class BufMgrTester
             {
                 System.out.println(prompt);
                 ui = input.nextInt();
-                if (ui == 0 || ui <-1)
+                if (ui <-1)
                 {
-                    System.out.println("Negative numbers, other then -1 to exit, and zero are not accepted as input by this program.");
+                    System.out.println("Negative numbers, other then -1 to exit, are not accepted as input by this program.");
                     throw new InputMismatchException();
                 }
                 return ui;
