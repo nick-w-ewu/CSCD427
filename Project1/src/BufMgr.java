@@ -173,9 +173,11 @@ public class BufMgr
 
     public void printFrameTable()
     {
+        System.out.println();
         for(int i = 0; i < this.frames.length; i++)
         {
             System.out.println("Frame: " + i + " " + this.frames[i].toString());
         }
+        System.out.println();
     }
 }

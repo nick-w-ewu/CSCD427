@@ -9,12 +9,29 @@ public class BufMgrTester
 {
     public static void main(String[] args)
     {
+        int size = 0;
+        if(args.length == 0)
+        {
+            System.out.println("Usage: BufMgrTester a_number");
+            System.exit(-1);
+        }
+        else
+        {
+            try
+            {
+                size = Integer.parseInt(args[0]);
+            }
+            catch(Exception e)
+            {
+                System.out.println("Usage: BufMgrTester a_number");
+                System.exit(-1);
+            }
+        }
         BufHashTbl mappings = new BufHashTbl();
-        BufMgr manager = new BufMgr(4, mappings);
+        BufMgr manager = new BufMgr(size, mappings);
         Scanner input = new Scanner(System.in);
         int userSelection = displayMenu(input), page;
 
-        System.out.println(userSelection);
         while(userSelection != -1)
         {
             switch(userSelection)
