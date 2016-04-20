@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public class BufMgrTester
 {
+    private static boolean debug = false;
     public static void main(String[] args)
     {
         int size = 0;
@@ -25,6 +26,10 @@ public class BufMgrTester
             {
                 System.out.println("Usage: BufMgrTester a_number");
                 System.exit(-1);
+            }
+            if(args.length == 2)
+            {
+                debug = true;
             }
         }
         BufHashTbl mappings = new BufHashTbl();
@@ -53,7 +58,10 @@ public class BufMgrTester
                     relinquishPage(page, manager);
                     break;
             }//end switch
-            manager.printFrameTable();
+            if(debug)
+            {
+                manager.printFrameTable();
+            }
             userSelection = displayMenu(input);
         }//end while
         System.out.println("Thank You for using the Buffer Manager, we are cleaning up and exiting...");
