@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 /**
  * Created by nicho_000 on 4/16/2016.
@@ -8,6 +9,7 @@ public class BPlusTree
     private BTNode root;
     private int order = 3;
     private int nextNodeId = 1;
+    private Hashtable<Integer, BTNode> quickAccess;
 
     public class BTNode
     {
@@ -149,6 +151,9 @@ public class BPlusTree
                     new2.frequencies.add(this.frequencies.get(2));
                     new2.elements.add(this.elements.get(3));
                     new2.frequencies.add(this.frequencies.get(3));
+                    quickAccess.put(new1.nodeID, new1);
+                    quickAccess.put(new2.nodeID, new2);
+                    quickAccess.remove(this.nodeID);
                     BTNode[] temp = {new1, new2};
                     return temp;
                 }
@@ -160,6 +165,8 @@ public class BPlusTree
     public BPlusTree()
     {
         this.root = new BTNode();
+        this.quickAccess = new Hashtable<>();
+        this.quickAccess.put(1, this.root);
         this.root.makeLeaf();
     }
 
@@ -203,7 +210,6 @@ public class BPlusTree
     private void insertOnePass(String s)
     {
         //split on the way down?
-        printNode(this.root);
         if (this.root.isFull())
         {
             BTNode new1 = new BTNode();
@@ -219,7 +225,11 @@ public class BPlusTree
             left.farRightChild = this.root.elements.get(1).leftChild;
             right.elements.add(this.root.elements.get(2));
             right.farRightChild = this.root.farRightChild;
+            this.quickAccess.remove(this.root.nodeID);
             this.root = new1;
+            this.quickAccess.put(this.root.nodeID, this.root);
+            this.quickAccess.put(left.nodeID, left);
+            this.quickAccess.put(right.nodeID, right);
             remapParent(left);
             remapParent(right);
         }
@@ -268,8 +278,10 @@ public class BPlusTree
                 }
                 remapParent(left);
                 remapParent(right);
+                this.quickAccess.put(left.nodeID, left);
+                this.quickAccess.put(right.nodeID, right);
+                this.quickAccess.remove(prev.nodeID);
             }
-            printNode(curr);
         }
         if (!curr.isFull())
         {
@@ -315,6 +327,86 @@ public class BPlusTree
         temp.parent = node;
     }
 
+    public void search(String s)
+    {
+        boolean found = false;
+        BTNode curr = this.root;
+        while (!curr.leaf)
+        {
+            for (int i = 0; i < curr.elements.size(); i++)
+            {
+                if (curr.elements.get(i).keyword.compareToIgnoreCase(s) > 0)
+                {
+                    curr = curr.elements.get(i).leftChild;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                curr = curr.farRightChild;
+            }
+            found = false;
+        }
+        for(int i = 0; i < curr.elements.size(); i++)
+        {
+            if(curr.elements.get(i).keyword.compareToIgnoreCase(s) == 0)
+            {
+                System.out.println(s + " Frequencey: " + curr.frequencies.get(i));
+                return;
+            }
+        }
+        System.out.println(s + " Not found\n");
+    }
+
+    public void rangeSearch(String s1, String s2)
+    {
+        boolean found = false;
+        BTNode curr = this.root;
+        while (!curr.leaf)
+        {
+            for (int i = 0; i < curr.elements.size(); i++)
+            {
+                if (curr.elements.get(i).keyword.compareToIgnoreCase(s1) > 0)
+                {
+                    curr = curr.elements.get(i).leftChild;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                curr = curr.farRightChild;
+            }
+            found = false;
+        }
+        for(int i = 0; i < curr.elements.size(); i++)
+        {
+            if(curr.elements.get(i).keyword.compareToIgnoreCase(s1) >= 0)
+            {
+                System.out.println(curr.elements.get(i).keyword);
+            }
+        }
+        curr = curr.farRightChild;
+        boolean maxReached = false;
+        while(curr != null && !maxReached)
+        {
+            for(int i = 0; i < curr.elements.size(); i++)
+            {
+                if(curr.elements.get(i).keyword.compareToIgnoreCase(s2) <= 0)
+                {
+                    System.out.println(curr.elements.get(i).keyword);
+                }
+                if(curr.elements.get(i).keyword.compareToIgnoreCase(s2) > 0)
+                {
+                    maxReached = true;
+                    break;
+                }
+            }
+            curr = curr.farRightChild;
+        }
+    }
+
     public void printNode(BTNode n)
     {
         if (n.leaf)
@@ -334,6 +426,11 @@ public class BPlusTree
         System.out.println();
     }
 
+    public BTNode getNode(int id)
+    {
+        return this.quickAccess.get(id);
+    }
+
     public void printWords()
     {
         BTNode curr = this.root;
@@ -350,5 +447,10 @@ public class BPlusTree
             }
             curr = curr.farRightChild;
         }
+    }
+
+    public void printTreeLayout()
+    {
+
     }
 }
