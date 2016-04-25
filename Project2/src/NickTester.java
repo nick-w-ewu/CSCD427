@@ -9,10 +9,19 @@ public class NickTester
         tree.insertWord("Cat");
         tree.insertWord("Bird");
         tree.insertWord("Apple");
-        tree.insertWord("Apple");
         tree.insertWord("Fish");
+        tree.insertWord("Dog");
+        tree.insertWord("Hamster");
+        tree.insertWord("Banana");
+        tree.insertWord("Can");
+        tree.insertWord("bad");
+        tree.insertWord("bat");
+        tree.insertWord("Amazon");
+        tree.insertWord("ape");
+        tree.insertWord("add");
+
 
         BPlusTree.BTNode root = tree.getRoot();
-        tree.printNode(root);
+        tree.printWords();
     }
 }

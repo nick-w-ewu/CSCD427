@@ -15,6 +15,7 @@ public class BPlusTree
         boolean leaf;
         ArrayList<Integer> frequencies;
         BTNode farRightChild;
+        BTNode leftLeafSibling;
         int nodeID;
         BTNode parent;
 
@@ -129,6 +130,12 @@ public class BPlusTree
                 BTNode new2 = new BTNode();
                 if (this.leaf)
                 {
+                    new1.leftLeafSibling = this.leftLeafSibling;
+                    if(new1.leftLeafSibling != null)
+                    {
+                        new1.leftLeafSibling.farRightChild = new1;
+                    }
+                    new2.leftLeafSibling = new1;
                     new1.makeLeaf();
                     new2.makeLeaf();
                     new1.elements.add(this.elements.get(0));
@@ -189,44 +196,123 @@ public class BPlusTree
         }
         else
         {
-            BTNode curr = this.root;
-            while(!curr.leaf)
+            insertOnePass(s);
+        }
+    }
+
+    private void insertOnePass(String s)
+    {
+        //split on the way down?
+        printNode(this.root);
+        if (this.root.isFull())
+        {
+            BTNode new1 = new BTNode();
+            BTNode right = new BTNode();
+            BTNode left = new BTNode();
+            right.parent = new1;
+            left.parent = new1;
+            new1.insertKeyword(this.root.elements.get(1).keyword);
+            BTElement new2 = new1.elements.get(0);
+            new2.leftChild = left;
+            new1.farRightChild = right;
+            left.elements.add(this.root.elements.get(0));
+            left.farRightChild = this.root.elements.get(1).leftChild;
+            right.elements.add(this.root.elements.get(2));
+            right.farRightChild = this.root.farRightChild;
+            this.root = new1;
+            remapParent(left);
+            remapParent(right);
+        }
+        BTNode curr = this.root, prev;
+        boolean found = false;
+        while (!curr.leaf)
+        {
+            prev = curr;
+            for (int i = 0; i < curr.elements.size(); i++)
             {
-                for(int i = 0; i < curr.elements.size()-1; i++)
+                if (curr.elements.get(i).keyword.compareToIgnoreCase(s) > 0)
                 {
-                    if(curr.elements.get(i).keyword.compareToIgnoreCase(s) < 0)
-                    {
-                        curr = curr.elements.get(i).leftChild;
-                        break;
-                    }
+                    curr = curr.elements.get(i).leftChild;
+                    found = true;
+                    break;
                 }
             }
-            if(!curr.isFull() || curr.containsKey(s))
+            if (!found)
             {
-                curr.insertKeywordLeaf(s);
+                curr = curr.farRightChild;
             }
-            else if(curr.isFull() && !curr.parent.isFull())
+            found = false;
+            if (prev.isFull())
             {
-                this.root.insertKeywordLeaf(s);
-                BTNode[] split = curr.splitNode();
-                curr.parent.insertKeyword(split[1].elements.get(0).keyword);
-                split[0].parent = curr.parent;
-                split[1].parent = curr.parent;
-                BTElement temp1 = new BTElement(split[1].elements.get(0).keyword);
-                int location = curr.parent.elements.indexOf(temp1);
-                temp1 = curr.parent.elements.get(location);
-                temp1.leftChild = split[0];
-                if(location == curr.parent.elements.size()-1)
+                BTNode right = new BTNode();
+                BTNode left = new BTNode();
+                right.parent = prev.parent;
+                left.parent = prev.parent;
+                left.elements.add(prev.elements.get(0));
+                left.farRightChild = prev.elements.get(1).leftChild;
+                right.elements.add(prev.elements.get(2));
+                right.farRightChild = prev.farRightChild;
+                prev.parent.insertKeyword(prev.elements.get(1).keyword);
+                BTElement temp1 = new BTElement(prev.parent.elements.get(0).keyword);
+                int location = prev.parent.elements.indexOf(temp1);
+                temp1 = prev.parent.elements.get(location);
+                temp1.leftChild = left;
+                if (location == prev.parent.elements.size() - 1)
                 {
-                    curr.parent.farRightChild = split[1];
+                    curr.parent.farRightChild = right;
                 }
                 else
                 {
-                    BTElement temp2 = curr.parent.elements.get(location+1);
-                    temp2.leftChild = split[2];
+                    BTElement temp2 = prev.parent.elements.get(location + 1);
+                    temp2.leftChild = right;
                 }
+                remapParent(left);
+                remapParent(right);
+            }
+            printNode(curr);
+        }
+        if (!curr.isFull())
+        {
+            curr.insertKeywordLeaf(s);
+        }
+        else if (curr.containsKey(s))
+        {
+            this.root.insertKeywordLeaf(s);
+        }
+        else
+        {
+            curr.insertKeywordLeaf(s);
+            BTNode[] split = curr.splitNode();
+            BTNode parent = curr.parent;
+            parent.insertKeyword(split[1].elements.get(0).keyword);
+            split[0].parent = parent;
+            split[1].parent = parent;
+            BTElement temp1 = new BTElement(split[1].elements.get(0).keyword);
+            int location = curr.parent.elements.indexOf(temp1);
+            temp1 = parent.elements.get(location);
+            temp1.leftChild = split[0];
+            if (location == curr.parent.elements.size() - 1)
+            {
+                curr.parent.farRightChild = split[1];
+            }
+            else
+            {
+                BTElement temp2 = curr.parent.elements.get(location + 1);
+                temp2.leftChild = split[1];
             }
         }
+    }
+
+    private void remapParent(BTNode node)
+    {
+        BTNode temp;
+        for(int i = 0; i < node.elements.size(); i++)
+        {
+            temp = node.elements.get(i).leftChild;
+            temp.parent = node;
+        }
+        temp = node.farRightChild;
+        temp.parent = node;
     }
 
     public void printNode(BTNode n)
@@ -244,6 +330,25 @@ public class BPlusTree
             {
                 System.out.println(n.elements.get(i).keyword);
             }
+        }
+        System.out.println();
+    }
+
+    public void printWords()
+    {
+        BTNode curr = this.root;
+        while (!curr.leaf)
+        {
+            curr = curr.elements.get(0).leftChild;
+        }
+        while (curr != null)
+        {
+            System.out.println("Node " + curr.nodeID);
+            for (int i = 0; i < curr.elements.size(); i++)
+            {
+                System.out.println(curr.elements.get(i).keyword);
+            }
+            curr = curr.farRightChild;
         }
     }
 }

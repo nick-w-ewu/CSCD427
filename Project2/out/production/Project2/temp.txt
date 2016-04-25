@@ -1,0 +1,46 @@
+        else
+        {
+            BTNode curr = this.root;
+            boolean found = false;
+            while(!curr.leaf)
+            {
+                for(int i = 0; i < curr.elements.size()-1; i++)
+                {
+                    if(curr.elements.get(i).keyword.compareToIgnoreCase(s) < 0)
+                    {
+                        curr = curr.elements.get(i).leftChild;
+                        found = true;
+                        break;
+                    }
+                }
+                if(!found)
+                {
+                    curr = curr.farRightChild;
+                }
+                found = false;
+            }
+            if(!curr.isFull() || curr.containsKey(s))
+            {
+                curr.insertKeywordLeaf(s);
+            }
+            else if(curr.isFull() && !curr.parent.isFull())
+            {
+                curr.insertKeywordLeaf(s);
+                BTNode[] split = curr.splitNode();
+                curr.parent.insertKeyword(split[1].elements.get(0).keyword);
+                split[0].parent = curr.parent;
+                split[1].parent = curr.parent;
+                BTElement temp1 = new BTElement(split[1].elements.get(0).keyword);
+                int location = curr.parent.elements.indexOf(temp1);
+                temp1 = curr.parent.elements.get(location);
+                temp1.leftChild = split[0];
+                if(location == curr.parent.elements.size()-1)
+                {
+                    curr.parent.farRightChild = split[1];
+                }
+                else
+                {
+                    BTElement temp2 = curr.parent.elements.get(location+1);
+                    temp2.leftChild = split[2];
+                }
+            }
