@@ -1,3 +1,10 @@
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Hashtable;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -6,10 +13,45 @@ import java.util.Scanner;
  */
 public class WordFrequency
 {
+    static Hashtable<String, String> skippedWords = new Hashtable<>();
     public static void main(String[] args)
     {
-        Scanner input = new Scanner(System.in);
+        String html = "";
+        if(args.length == 0)
+        {
+            System.out.println("Usage: BufMgrTester URL [ignore_file_name]");
+        }
+        else if(args.length == 1)
+        {
+            html = args[0];
+        }
+        else if(args.length == 2)
+        {
+            html = args[0];
+            processStopWords(args[1]);
+        }
+
         BPlusTree tree = new BPlusTree();
+        try
+        {
+            System.out.println("Parsing HTML, please hang on...\n");
+            Document doc = Jsoup.connect(html).get();
+            String body = doc.body().text(), temp;
+            String[] words = body.split(" ");
+            for(String word : words)
+            {
+                temp = strip(word);
+                if(isAccepted(temp))
+                {
+                    tree.insertWord(temp);
+                }
+            }
+        }
+        catch (IOException e)
+        {
+            System.out.println("Failed to parse html file, you can manually enter words if you would like");
+        }
+        Scanner input = new Scanner(System.in);
         int userSelection = displayMenu(input), node;
         String word1, word2;
 
@@ -29,16 +71,19 @@ public class WordFrequency
                     tree.printNode(requested);
                     break;
                 case 4:
+                    input.nextLine();
                     System.out.println("Enter the word you wish to insert into the tree:");
                     word1 = input.nextLine();
                     tree.insertWord(word1);
                     break;
                 case 5:
+                    input.nextLine();
                     System.out.println("Enter the word you wish to serach for:");
                     word1 = input.nextLine();
                     tree.search(word1);
                     break;
                 case 6:
+                    input.nextLine();
                     System.out.println("Enter a word for the lower boundary of the range search:");
                     word1 = input.nextLine();
                     System.out.println("Enter a word for the upper boundary of the range search:");
@@ -48,7 +93,67 @@ public class WordFrequency
             }//end switch
             userSelection = displayMenu(input);
         }//end while
-        System.out.println("Thank You for using the Buffer Manager, we are cleaning up and exiting...");
+        System.out.println("Thank You for using the B+ Tree Manager, we are cleaning up and exiting...");
+    }
+
+    private static void processStopWords(String file)
+    {
+        try
+        {
+            Scanner fin = new Scanner(new File(file));
+            String temp;
+            while(fin.hasNext())
+            {
+                temp = fin.nextLine();
+                skippedWords.put(temp, temp);
+            }
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("Failed to process ignored words list, continuing without it.\n");
+        }
+    }
+
+    private static boolean isAccepted(String temp)
+    {
+        try
+        {
+            int i = Integer.parseInt(temp);
+            return false;
+        }
+        catch (Exception e)
+        {
+            if(temp.length() == 0)
+            {
+                return false;
+            }
+            String test = skippedWords.get(temp);
+            if(test == null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static String strip(String word)
+    {
+        if(word.length() <= 1)
+        {
+            return word.toLowerCase();
+        }
+        char first = word.charAt(0), last = word.charAt(word.length()-1);
+        int start = 0, end = word.length();
+        if(!Character.isAlphabetic(first))
+        {
+            start = 1;
+        }
+        if(!Character.isAlphabetic(last))
+        {
+            end--;
+        }
+        String temp = word.substring(start, end);
+        return temp.toLowerCase();
     }
 
     private static int displayMenu(Scanner input)
@@ -65,7 +170,7 @@ public class WordFrequency
             System.out.println("3). Display a Node from the Tree");
             System.out.println("4). Insert a Word");
             System.out.println("5). Search a Word");
-            System.out.println("5). Search a Range");
+            System.out.println("6). Search a Range");
             System.out.println("-1). Quit");
 
             userSelection = intInput(input, prompt);

@@ -44,7 +44,7 @@ public class BPlusTree
             int index = this.elements.indexOf(temp1);
             if (index != -1)
             {
-                int temp = this.frequencies.get(index);
+                Integer temp = this.frequencies.get(index);
                 this.frequencies.remove(temp);
                 temp++;
                 this.frequencies.add(index, temp);
@@ -133,7 +133,7 @@ public class BPlusTree
                 if (this.leaf)
                 {
                     new1.leftLeafSibling = this.leftLeafSibling;
-                    if(new1.leftLeafSibling != null)
+                    if (new1.leftLeafSibling != null)
                     {
                         new1.leftLeafSibling.farRightChild = new1;
                     }
@@ -155,6 +155,11 @@ public class BPlusTree
                     quickAccess.put(new2.nodeID, new2);
                     quickAccess.remove(this.nodeID);
                     BTNode[] temp = {new1, new2};
+                    BTNode temp1 = this.farRightChild;
+                    if (farRightChild != null)
+                    {
+                        temp1.leftLeafSibling = new2;
+                    }
                     return temp;
                 }
             }
@@ -196,6 +201,7 @@ public class BPlusTree
                 BTElement temp = newRoot.elements.get(0);
                 split[0].parent = newRoot;
                 split[1].parent = newRoot;
+                split[1].leftLeafSibling = split[0];
                 temp.leftChild = split[0];
                 newRoot.farRightChild = split[1];
                 this.root = newRoot;
@@ -203,7 +209,14 @@ public class BPlusTree
         }
         else
         {
-            insertOnePass(s);
+            try
+            {
+                insertOnePass(s);
+            }
+            catch (Exception e)
+            {
+                System.out.println(s);
+            }
         }
     }
 
@@ -263,13 +276,13 @@ public class BPlusTree
                 right.elements.add(prev.elements.get(2));
                 right.farRightChild = prev.farRightChild;
                 prev.parent.insertKeyword(prev.elements.get(1).keyword);
-                BTElement temp1 = new BTElement(prev.parent.elements.get(0).keyword);
+                BTElement temp1 = new BTElement(prev.elements.get(1).keyword);
                 int location = prev.parent.elements.indexOf(temp1);
                 temp1 = prev.parent.elements.get(location);
                 temp1.leftChild = left;
                 if (location == prev.parent.elements.size() - 1)
                 {
-                    curr.parent.farRightChild = right;
+                    prev.parent.farRightChild = right;
                 }
                 else
                 {
@@ -289,7 +302,7 @@ public class BPlusTree
         }
         else if (curr.containsKey(s))
         {
-            this.root.insertKeywordLeaf(s);
+            curr.insertKeywordLeaf(s);
         }
         else
         {
@@ -318,7 +331,7 @@ public class BPlusTree
     private void remapParent(BTNode node)
     {
         BTNode temp;
-        for(int i = 0; i < node.elements.size(); i++)
+        for (int i = 0; i < node.elements.size(); i++)
         {
             temp = node.elements.get(i).leftChild;
             temp.parent = node;
@@ -348,11 +361,12 @@ public class BPlusTree
             }
             found = false;
         }
-        for(int i = 0; i < curr.elements.size(); i++)
+        for (int i = 0; i < curr.elements.size(); i++)
         {
-            if(curr.elements.get(i).keyword.compareToIgnoreCase(s) == 0)
+            if (curr.elements.get(i).keyword.compareToIgnoreCase(s) == 0)
             {
                 System.out.println(s + " Frequencey: " + curr.frequencies.get(i));
+                System.out.println();
                 return;
             }
         }
@@ -361,6 +375,7 @@ public class BPlusTree
 
     public void rangeSearch(String s1, String s2)
     {
+        System.out.println();
         boolean found = false;
         BTNode curr = this.root;
         while (!curr.leaf)
@@ -380,24 +395,24 @@ public class BPlusTree
             }
             found = false;
         }
-        for(int i = 0; i < curr.elements.size(); i++)
+        for (int i = 0; i < curr.elements.size(); i++)
         {
-            if(curr.elements.get(i).keyword.compareToIgnoreCase(s1) >= 0)
+            if (curr.elements.get(i).keyword.compareToIgnoreCase(s1) >= 0)
             {
                 System.out.println(curr.elements.get(i).keyword);
             }
         }
         curr = curr.farRightChild;
         boolean maxReached = false;
-        while(curr != null && !maxReached)
+        while (curr != null && !maxReached)
         {
-            for(int i = 0; i < curr.elements.size(); i++)
+            for (int i = 0; i < curr.elements.size(); i++)
             {
-                if(curr.elements.get(i).keyword.compareToIgnoreCase(s2) <= 0)
+                if (curr.elements.get(i).keyword.compareToIgnoreCase(s2) <= 0)
                 {
                     System.out.println(curr.elements.get(i).keyword);
                 }
-                if(curr.elements.get(i).keyword.compareToIgnoreCase(s2) > 0)
+                if (curr.elements.get(i).keyword.compareToIgnoreCase(s2) > 0)
                 {
                     maxReached = true;
                     break;
@@ -405,6 +420,7 @@ public class BPlusTree
             }
             curr = curr.farRightChild;
         }
+        System.out.println();
     }
 
     public void printNode(BTNode n)
@@ -424,6 +440,7 @@ public class BPlusTree
             }
         }
         System.out.println();
+        System.out.println();
     }
 
     public BTNode getNode(int id)
@@ -433,6 +450,7 @@ public class BPlusTree
 
     public void printWords()
     {
+        System.out.println();
         BTNode curr = this.root;
         while (!curr.leaf)
         {
@@ -440,17 +458,34 @@ public class BPlusTree
         }
         while (curr != null)
         {
-            System.out.println("Node " + curr.nodeID);
             for (int i = 0; i < curr.elements.size(); i++)
             {
                 System.out.println(curr.elements.get(i).keyword);
             }
             curr = curr.farRightChild;
         }
+        System.out.println();
     }
 
     public void printTreeLayout()
     {
+        System.out.println();
+        String tab = "";
+        printTraverse(this.root, tab);
+        System.out.println();
+    }
 
+    private void printTraverse(BTNode curr, String tab)
+    {
+        System.out.println(tab + curr.nodeID);
+        tab+="\t";
+        if(!curr.leaf)
+        {
+            for(int i = 0; i < curr.elements.size(); i++)
+            {
+                printTraverse(curr.elements.get(i).leftChild, tab);
+            }
+            printTraverse(curr.farRightChild, tab);
+        }
     }
 }
