@@ -1,0 +1,13 @@
+15086	Sun	Physics	74
+13826	Sommerfeldt	Pol. Sci.	80
+19766	Simon	Biology	29
+12666	Power	Athletics	118
+13506	Patrick	Physics	85
+18286	Pang	Finance	110
+15726	Neuhold	Finance	27
+1726	Matsunami	Biology	94
+11966	Kowe	Math	69
+17086	Hazemi	Math	90
+11126	Englund	Pol. Sci.	76
+1826	Dhav	Astronomy	8
+12326	Watson	Finance	50

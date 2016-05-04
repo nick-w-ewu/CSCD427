@@ -1,0 +1,8 @@
+14432	Whitley	Geology	2
+18752	Schulman	Civil Eng.	102
+1232	Marcus	Marketing	110
+13352	Gorsky	Athletics	53
+1812	Chyr	Marketing	47
+17192	Carroll	Pol. Sci.	75
+14032	Belhadji	Elec. Eng.	0
+11152	Al-Tahat	English	87

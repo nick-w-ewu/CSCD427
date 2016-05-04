@@ -1,0 +1,13 @@
+18808	Snif	Mech. Eng.	116
+1968	Sahm	Finance	4
+13028	Okano	Geology	89
+14668	Malinen	Athletics	20
+19048	Leuen	Statistics	122
+14628	Lehtinen	Psychology	47
+108	Dhav	Biology	80
+17128	Chuon	Civil Eng.	81
+15328	Chien	Statistics	129
+13408	Bromley	Elec. Eng.	81
+18108	Brailsford	Cybernetics	107
+16528	Angs	Accounting	24
+19848	Tiwari	Comp. Sci.	96

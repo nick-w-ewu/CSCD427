@@ -1,0 +1,16 @@
+11237	Rokhs	Physics	5
+11057	Robinson	Marketing	120
+17377	Pisini	English	67
+10917	Morales	Cybernetics	54
+13217	Liu	Athletics	95
+11377	Jr	Accounting	100
+17997	Ishikawa	Languages	128
+19917	Hayrapetyan	Languages	121
+17397	Caleff	Languages	31
+13757	Bedny	Astronomy	3
+15457	Arinb	Physics	123
+15517	Anis	Geology	29
+16057	Wicki	Mech. Eng.	114
+17057	Swartj	Geology	94
+1737	Shinagawa	Biology	118
+16297	Sacchi	Marketing	44

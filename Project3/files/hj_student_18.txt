@@ -1,0 +1,9 @@
+15538	Yeung	Athletics	111
+15578	Pacie	Elec. Eng.	32
+10838	Marlet	Accounting	91
+11578	Kwan	Languages	37
+12078	Knutson	Languages	97
+18338	Kangs	Physics	9
+15698	Dink	Psychology	72
+19638	Dawson	Cybernetics	107
+1018	Colin	Civil Eng.	81

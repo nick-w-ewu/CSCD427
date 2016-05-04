@@ -1,0 +1,9 @@
+19791	Vanrell	Comp. Sci.	61
+16631	Stratulat	Biology	20
+17831	Srivastava	Languages	75
+12711	Malagoli	Physics	97
+16311	Liao	Accounting	33
+13211	Diab	Civil Eng.	66
+12971	Bumbau	Elec. Eng.	47
+17911	Audeh	Biology	92
+13511	Adam	Cybernetics	15

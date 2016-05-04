@@ -1,0 +1,10 @@
+16250	Uhrig	English	87
+1110	Tzeng	Civil Eng.	23
+15430	Sasso	Psychology	39
+11510	Rakoj	Mech. Eng.	37
+11530	Ng	Marketing	92
+15030	Massour	Mech. Eng.	44
+19050	Erdem	Civil Eng.	58
+15070	Enokib	Math	65
+13290	Bonatto	Biology	83
+19450	Asahara	Cybernetics	37

@@ -1,0 +1,13 @@
+14596	Vekk	Biology	105
+10556	Reed	English	79
+11076	Prasad	Pol. Sci.	114
+18636	Mori	Statistics	23
+17676	Michel	Psychology	43
+1836	Marinov	Elec. Eng.	85
+17076	King	Statistics	42
+17996	Karpist	Finance	103
+12216	Griffiths	Cybernetics	94
+10076	Duan	Civil Eng.	105
+12236	Bricker	Accounting	116
+19536	Bhattacharya	Math	92
+10736	Veselovsky	Elec. Eng.	62

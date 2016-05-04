@@ -1,0 +1,14 @@
+11453	Yamashita	Astronomy	109
+15613	Umehara	Marketing	41
+12173	Thimm	English	60
+16593	Skuras	Psychology	5
+19293	Singhal	Geology	118
+1533	She	Statistics	29
+16133	Orlet	Cybernetics	43
+16753	Kuwadak	Comp. Sci.	67
+17133	Kang	Civil Eng.	109
+16453	Kanata	Astronomy	78
+13753	Hoshi	Civil Eng.	68
+16993	Akaiw	Accounting	82
+10033	Zelty	Mech. Eng.	60
+10693	Zabary	Statistics	111

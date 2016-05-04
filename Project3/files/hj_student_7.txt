@@ -1,0 +1,17 @@
+17607	Ould	Athletics	115
+16347	Morimoto	Mech. Eng.	2
+16467	Meyl	Comp. Sci.	92
+17507	Mathur	Mech. Eng.	48
+10527	Kieras	Physics	128
+16907	Keiss	Accounting	59
+15487	Januszewski	Athletics	14
+1367	Ignj	Math	69
+17207	Holn	Astronomy	57
+18367	Goodwin	Civil Eng.	95
+18007	Chanon	Biology	90
+10727	Allard	Physics	27
+1827	Westbrook	Civil Eng.	61
+107	Shabuno	Math	19
+10267	Rzecz	Comp. Sci.	5
+1087	Roses	Accounting	73
+1727	Ratcliff	Mech. Eng.	49

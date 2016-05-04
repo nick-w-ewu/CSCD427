@@ -1,0 +1,8 @@
+13365	Wolter	Mech. Eng.	55
+17665	Tewari	English	62
+10705	Terauchi	Physics	48
+1285	Szczerban	Pol. Sci.	97
+14065	Starker	History	7
+16405	Rahman	Languages	5
+19245	Cai	Comp. Sci.	4
+16885	Biehl	Math	59

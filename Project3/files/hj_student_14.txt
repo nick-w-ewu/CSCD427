@@ -1,0 +1,13 @@
+10814	Waks	Elec. Eng.	56
+10454	Ugarte	Pol. Sci.	120
+14874	Singhal	Comp. Sci.	34
+18554	Ramaswamy	Psychology	21
+14554	Ramadan	Psychology	96
+18234	Nirenbu	Pol. Sci.	19
+10834	More	Geology	126
+12214	Morales	Languages	51
+14094	Miao	Comp. Sci.	45
+15074	Kirtane	Physics	36
+1954	Frank	Geology	29
+11194	El-Helw	Pol. Sci.	71
+14214	Yoneda	Cybernetics	129

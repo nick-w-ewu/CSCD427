@@ -1,0 +1,13 @@
+13504	Zander	Astronomy	90
+17924	Tavan	Psychology	97
+14284	Takeshi	Athletics	32
+19824	Savelieva	Physics	7
+11604	Neff	Pol. Sci.	39
+10204	Mediratta	Geology	112
+1884	Masini	Marketing	89
+15144	Lapio	Statistics	110
+14484	Langer	Astronomy	62
+15024	Kawahara	Civil Eng.	10
+10904	Jerns	History	21
+17944	Hamarn	Mech. Eng.	5
+17424	Zouao	English	75

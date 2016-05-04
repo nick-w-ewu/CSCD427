@@ -1,0 +1,13 @@
+12615	Tewari	Geology	40
+16515	Suppan	Languages	48
+16035	Starker	English	94
+13495	Srini	Pol. Sci.	34
+11195	Shiang	Cybernetics	62
+11095	Schultz	Languages	51
+11455	Peyse	Athletics	18
+18775	Pampal	Comp. Sci.	89
+11855	Mendelzon	Languages	114
+19735	Bishop	Physics	9
+11055	Arnoux	Geology	121
+18675	Araya	Statistics	82
+16075	Wolter	Pol. Sci.	45

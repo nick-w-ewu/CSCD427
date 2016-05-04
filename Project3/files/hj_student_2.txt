@@ -1,0 +1,12 @@
+12362	Zhanr	Civil Eng.	115
+11422	Saito	Physics	34
+19862	Prasad	Pol. Sci.	22
+1402	Oswald	Comp. Sci.	12
+14182	Moszkowski	Civil Eng.	73
+19362	Linden	Finance	123
+11682	Juol	Athletics	126
+11202	Heckman	Math	120
+11262	Foels	Marketing	117
+1922	Cavalcanti	Athletics	48
+19582	Canas	Finance	7
+19342	Bouzeghoub	Finance	35
