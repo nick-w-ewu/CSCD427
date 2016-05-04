@@ -1,10 +1,8 @@
-16250	Uhrig	English	87
-1110	Tzeng	Civil Eng.	23
-15430	Sasso	Psychology	39
-11510	Rakoj	Mech. Eng.	37
-11530	Ng	Marketing	92
-15030	Massour	Mech. Eng.	44
-19050	Erdem	Civil Eng.	58
-15070	Enokib	Math	65
-13290	Bonatto	Biology	83
-19450	Asahara	Cybernetics	37
+12683	Sin	Accounting	115
+18554	Ramaswamy	Psychology	21
+19048	Leuen	Statistics	122
+13880	Lazos	Physics	98
+11201	Bianchi	Statistics	0
+14032	Belhadji	Elec. Eng.	0
+14621	Azevedo	Astronomy	17
+15457	Arinb	Physics	123

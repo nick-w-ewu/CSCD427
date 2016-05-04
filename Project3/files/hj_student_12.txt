@@ -1,8 +1,17 @@
-14432	Whitley	Geology	2
-18752	Schulman	Civil Eng.	102
-1232	Marcus	Marketing	110
-13352	Gorsky	Athletics	53
-1812	Chyr	Marketing	47
-17192	Carroll	Pol. Sci.	75
-14032	Belhadji	Elec. Eng.	0
-11152	Al-Tahat	English	87
+16523	Redw	Math	117
+12666	Power	Athletics	118
+18499	Peter	Biology	21
+1836	Marinov	Elec. Eng.	85
+1000	Manber	Civil Eng.	39
+13217	Liu	Athletics	95
+17207	Holn	Astronomy	57
+10481	Grosch	Astronomy	39
+19050	Erdem	Civil Eng.	58
+19582	Canas	Finance	7
+17397	Caleff	Languages	31
+13749	Alfaro	Marketing	23
+12362	Zhanr	Civil Eng.	115
+19791	Vanrell	Comp. Sci.	61
+19848	Tiwari	Comp. Sci.	96
+1285	Szczerban	Pol. Sci.	97
+107	Shabuno	Math	19

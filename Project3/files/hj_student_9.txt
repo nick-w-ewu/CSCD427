@@ -1,12 +1,11 @@
-12069	Skeen	History	10
+123	Wingb	Civil Eng.	86
+17831	Srivastava	Languages	75
+14639	Sagiv	Mech. Eng.	26
 14829	Philippe	Accounting	105
-17769	Pearlman	Biology	45
-14869	Palmer	Astronomy	106
-16849	Kantors	Geology	117
+16311	Liao	Accounting	33
 10269	Hilberg	Psychology	75
-16969	Hakkinen	Finance	70
-18469	Coppens	Marketing	26
-15249	Cheah	Accounting	1
-18809	Benson	Marketing	20
-13749	Alfaro	Marketing	23
-18709	Agar	Math	65
+14563	Haigh	Comp. Sci.	16
+19541	Drews	Marketing	1
+17128	Chuon	Civil Eng.	81
+13290	Bonatto	Biology	83
+13081	Alqui	Languages	112

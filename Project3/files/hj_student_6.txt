@@ -1,13 +1,11 @@
-15086	Sun	Physics	74
-13826	Sommerfeldt	Pol. Sci.	80
+18740	Williamson	Athletics	16
+16631	Stratulat	Biology	20
+16593	Skuras	Psychology	5
 19766	Simon	Biology	29
-12666	Power	Athletics	118
-13506	Patrick	Physics	85
-18286	Pang	Finance	110
-15726	Neuhold	Finance	27
-1726	Matsunami	Biology	94
-11966	Kowe	Math	69
-17086	Hazemi	Math	90
-11126	Englund	Pol. Sci.	76
-1826	Dhav	Astronomy	8
-12326	Watson	Finance	50
+17600	Peter	Languages	47
+17676	Michel	Psychology	43
+14484	Langer	Astronomy	62
+11083	Kerridge	Statistics	113
+19861	Fontana	Civil Eng.	81
+10076	Duan	Civil Eng.	105
+13211	Diab	Civil Eng.	66

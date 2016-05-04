@@ -1,7 +1,0 @@
-14639	Sagiv	Mech. Eng.	26
-18859	Rubio	English	21
-17339	Petzo	English	58
-18499	Peter	Biology	21
-12979	Hammond	Elec. Eng.	5
-11419	Geronimo	Civil Eng.	66
-14499	Axte	Biology	115

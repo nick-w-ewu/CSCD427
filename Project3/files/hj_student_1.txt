@@ -1,15 +1,15 @@
-10481	Grosch	Astronomy	39
-13741	Grieng	Psychology	122
-11101	Glaho	Cybernetics	119
-19861	Fontana	Civil Eng.	81
-19541	Drews	Marketing	1
-18941	Denecker	History	46
-19321	Chang	Mech. Eng.	124
-11201	Bianchi	Statistics	0
-11441	Betho	Languages	36
-13921	Berger	Math	120
-14621	Azevedo	Astronomy	17
-13081	Alqui	Languages	112
-14581	Vagn	Biology	129
-12941	Ren	Marketing	76
-18821	Linden	Astronomy	98
+10736	Veselovsky	Elec. Eng.	62
+15980	Ross	Athletics	81
+10204	Mediratta	Geology	112
+15030	Massour	Mech. Eng.	44
+18583	Ma	Finance	74
+19362	Linden	Finance	123
+15144	Lapio	Statistics	110
+10527	Kieras	Physics	128
+14023	Deshpande	History	90
+18469	Coppens	Marketing	26
+18108	Brailsford	Cybernetics	107
+13757	Bedny	Astronomy	3
+17424	Zouao	English	75
+10033	Zelty	Mech. Eng.	60
+16075	Wolter	Pol. Sci.	45

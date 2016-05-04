@@ -1,13 +1,15 @@
-13504	Zander	Astronomy	90
-17924	Tavan	Psychology	97
-14284	Takeshi	Athletics	32
-19824	Savelieva	Physics	7
-11604	Neff	Pol. Sci.	39
-10204	Mediratta	Geology	112
-1884	Masini	Marketing	89
-15144	Lapio	Statistics	110
-14484	Langer	Astronomy	62
-15024	Kawahara	Civil Eng.	10
-10904	Jerns	History	21
-17944	Hamarn	Mech. Eng.	5
-17424	Zouao	English	75
+12563	Stone	Marketing	66
+12069	Skeen	History	10
+11195	Shiang	Cybernetics	62
+1087	Roses	Accounting	73
+17769	Pearlman	Biology	45
+10663	Okaf	Geology	59
+10834	More	Geology	126
+17997	Ishikawa	Languages	128
+1220	Hito	Geology	42
+13741	Grieng	Psychology	122
+15698	Dink	Psychology	72
+19536	Bhattacharya	Math	92
+14596	Vekk	Biology	105
+10454	Ugarte	Pol. Sci.	120
+16515	Suppan	Languages	48

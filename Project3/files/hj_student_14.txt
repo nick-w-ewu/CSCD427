@@ -1,13 +1,16 @@
-10814	Waks	Elec. Eng.	56
-10454	Ugarte	Pol. Sci.	120
-14874	Singhal	Comp. Sci.	34
-18554	Ramaswamy	Psychology	21
-14554	Ramadan	Psychology	96
-18234	Nirenbu	Pol. Sci.	19
-10834	More	Geology	126
-12214	Morales	Languages	51
-14094	Miao	Comp. Sci.	45
-15074	Kirtane	Physics	36
-1954	Frank	Geology	29
-11194	El-Helw	Pol. Sci.	71
-14214	Yoneda	Cybernetics	129
+17057	Swartj	Geology	94
+16297	Sacchi	Marketing	44
+11604	Neff	Pol. Sci.	39
+16753	Kuwadak	Comp. Sci.	67
+17076	King	Statistics	42
+15024	Kawahara	Civil Eng.	10
+17133	Kang	Civil Eng.	109
+13352	Gorsky	Athletics	53
+11262	Foels	Marketing	117
+19603	Colu	Finance	122
+15328	Chien	Statistics	129
+18007	Chanon	Biology	90
+13504	Zander	Astronomy	90
+12326	Watson	Finance	50
+15613	Umehara	Marketing	41
+17665	Tewari	English	62

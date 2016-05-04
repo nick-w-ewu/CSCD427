@@ -1,9 +1,17 @@
-19791	Vanrell	Comp. Sci.	61
-16631	Stratulat	Biology	20
-17831	Srivastava	Languages	75
-12711	Malagoli	Physics	97
-16311	Liao	Accounting	33
-13211	Diab	Civil Eng.	66
-12971	Bumbau	Elec. Eng.	47
-17911	Audeh	Biology	92
-13511	Adam	Cybernetics	15
+17339	Petzo	English	58
+14869	Palmer	Astronomy	106
+10917	Morales	Cybernetics	54
+18821	Linden	Astronomy	98
+11202	Heckman	Math	120
+19220	Hayashi	History	77
+11126	Englund	Pol. Sci.	76
+19638	Dawson	Cybernetics	107
+1018	Colin	Civil Eng.	81
+15249	Cheah	Accounting	1
+163	Bandekar	Finance	49
+10727	Allard	Physics	27
+14432	Whitley	Geology	2
+1968	Sahm	Finance	4
+18859	Rubio	English	21
+10556	Reed	English	79
+17377	Pisini	English	67

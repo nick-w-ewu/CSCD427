@@ -1,14 +1,22 @@
-11453	Yamashita	Astronomy	109
-15613	Umehara	Marketing	41
+12078	Knutson	Languages	97
+18367	Goodwin	Civil Eng.	95
+108	Dhav	Biology	80
+12971	Bumbau	Elec. Eng.	47
+13408	Bromley	Elec. Eng.	81
+19735	Bishop	Physics	9
+16885	Biehl	Math	59
+13921	Berger	Math	120
+17911	Audeh	Biology	92
+19450	Asahara	Cybernetics	37
+15517	Anis	Geology	29
+18709	Agar	Math	65
+16543	Toffoli	History	83
 12173	Thimm	English	60
-16593	Skuras	Psychology	5
-19293	Singhal	Geology	118
+13826	Sommerfeldt	Pol. Sci.	80
 1533	She	Statistics	29
-16133	Orlet	Cybernetics	43
-16753	Kuwadak	Comp. Sci.	67
-17133	Kang	Civil Eng.	109
-16453	Kanata	Astronomy	78
-13753	Hoshi	Civil Eng.	68
-16993	Akaiw	Accounting	82
-10033	Zelty	Mech. Eng.	60
-10693	Zabary	Statistics	111
+17607	Ould	Athletics	115
+13028	Okano	Geology	89
+18234	Nirenbu	Pol. Sci.	19
+15726	Neuhold	Finance	27
+16467	Meyl	Comp. Sci.	92
+19203	Koch	Physics	88

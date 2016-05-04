@@ -12,10 +12,10 @@ public class HashJoin
     int numBuckets;
     ArrayList<String> outputBuffer = new ArrayList<>();
 
-    public HashJoin(int b, int n) throws FileNotFoundException
+    public HashJoin(int b, int m) throws FileNotFoundException
     {
         this.blockSize = b;
-        this.numBuckets = n;
+        this.numBuckets = m-1;
         PrintWriter out = new PrintWriter(new File("files/hj.txt"));
         out.close();
     }
@@ -145,8 +145,6 @@ public class HashJoin
             }
             for(Student s : partition)
             {
-                System.out.println(takes[i]);
-                System.out.println(s + "\n");
                 if(s.id == takes[i].id)
                 {
                     storeJoined(s, takes[i]);

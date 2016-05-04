@@ -1,13 +1,16 @@
-14596	Vekk	Biology	105
-10556	Reed	English	79
-11076	Prasad	Pol. Sci.	114
 18636	Mori	Statistics	23
-17676	Michel	Psychology	43
-1836	Marinov	Elec. Eng.	85
-17076	King	Statistics	42
-17996	Karpist	Finance	103
-12216	Griffiths	Cybernetics	94
-10076	Duan	Civil Eng.	105
-12236	Bricker	Accounting	116
-19536	Bhattacharya	Math	92
-10736	Veselovsky	Elec. Eng.	62
+12214	Morales	Languages	51
+1726	Matsunami	Biology	94
+1460	Martinsen	History	55
+1232	Marcus	Marketing	110
+16907	Keiss	Accounting	59
+11682	Juol	Athletics	126
+13753	Hoshi	Civil Eng.	68
+1954	Frank	Geology	29
+15083	Formisano	Physics	50
+17192	Carroll	Pol. Sci.	75
+11055	Arnoux	Geology	121
+1080	Xue	Languages	94
+14874	Singhal	Comp. Sci.	34
+13506	Patrick	Physics	85
+11530	Ng	Marketing	92

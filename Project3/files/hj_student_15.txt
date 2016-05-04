@@ -1,13 +1,10 @@
-12615	Tewari	Geology	40
-16515	Suppan	Languages	48
-16035	Starker	English	94
-13495	Srini	Pol. Sci.	34
-11195	Shiang	Cybernetics	62
-11095	Schultz	Languages	51
-11455	Peyse	Athletics	18
-18775	Pampal	Comp. Sci.	89
-11855	Mendelzon	Languages	114
-19735	Bishop	Physics	9
-11055	Arnoux	Geology	121
-18675	Araya	Statistics	82
-16075	Wolter	Pol. Sci.	45
+10693	Zabary	Statistics	111
+15538	Yeung	Athletics	111
+11453	Yamashita	Astronomy	109
+14284	Takeshi	Athletics	32
+11510	Rakoj	Mech. Eng.	37
+1402	Oswald	Comp. Sci.	12
+14094	Miao	Comp. Sci.	45
+11966	Kowe	Math	69
+16849	Kantors	Geology	117
+11377	Jr	Accounting	100

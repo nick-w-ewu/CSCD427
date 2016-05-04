@@ -1,12 +1,11 @@
-12362	Zhanr	Civil Eng.	115
-11422	Saito	Physics	34
-19862	Prasad	Pol. Sci.	22
-1402	Oswald	Comp. Sci.	12
-14182	Moszkowski	Civil Eng.	73
-19362	Linden	Finance	123
-11682	Juol	Athletics	126
-11202	Heckman	Math	120
-11262	Foels	Marketing	117
-1922	Cavalcanti	Athletics	48
-19582	Canas	Finance	7
-19342	Bouzeghoub	Finance	35
+14214	Yoneda	Cybernetics	129
+16057	Wicki	Mech. Eng.	114
+15430	Sasso	Psychology	39
+12941	Ren	Marketing	76
+16133	Orlet	Cybernetics	43
+15487	Januszewski	Athletics	14
+12979	Hammond	Elec. Eng.	5
+16969	Hakkinen	Finance	70
+1826	Dhav	Astronomy	8
+14499	Axte	Biology	115
+13511	Adam	Cybernetics	15

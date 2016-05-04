@@ -1,11 +1,7 @@
-1080	Xue	Languages	94
-18740	Williamson	Athletics	16
-15340	Silbert	Psychology	39
-15980	Ross	Athletics	81
-17600	Peter	Languages	47
-16480	Noga	Psychology	5
-1460	Martinsen	History	55
-1000	Manber	Civil Eng.	39
-13880	Lazos	Physics	98
-1220	Hito	Geology	42
-19220	Hayashi	History	77
+15086	Sun	Physics	74
+14554	Ramadan	Psychology	96
+14668	Malinen	Athletics	20
+12711	Malagoli	Physics	97
+11419	Geronimo	Civil Eng.	66
+12236	Bricker	Accounting	116
+19342	Bouzeghoub	Finance	35

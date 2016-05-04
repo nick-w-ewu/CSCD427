@@ -13,7 +13,7 @@ public class NickTester
         HashJoin test = new HashJoin(12, 20);
         test.hash("input/takes.txt", "take");
         test.hash("input/students.txt", "student");
-        for(int i = 0; i < 20; i++)
+        for(int i = 0; i < 19; i++)
         {
             test.join(i, i);
         }

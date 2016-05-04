@@ -1,18 +1,11 @@
-16523	Redw	Math	117
-10663	Okaf	Geology	59
-15883	Marques	Math	24
-18583	Ma	Finance	74
-13403	Latour	English	82
-19203	Koch	Physics	88
-11083	Kerridge	Statistics	113
-14563	Haigh	Comp. Sci.	16
-15083	Formisano	Physics	50
-14023	Deshpande	History	90
-19603	Colu	Finance	122
-163	Bandekar	Finance	49
-123	Wingb	Civil Eng.	86
-15283	Williams	Astronomy	0
-16543	Toffoli	History	83
-12563	Stone	Marketing	66
-12683	Sin	Accounting	115
-13023	Serrano	Marketing	108
+1827	Westbrook	Civil Eng.	61
+10814	Waks	Elec. Eng.	56
+11422	Saito	Physics	34
+18775	Pampal	Comp. Sci.	89
+1884	Masini	Marketing	89
+17996	Karpist	Finance	103
+18338	Kangs	Physics	9
+15070	Enokib	Math	65
+11194	El-Helw	Pol. Sci.	71
+1922	Cavalcanti	Athletics	48
+11441	Betho	Languages	36

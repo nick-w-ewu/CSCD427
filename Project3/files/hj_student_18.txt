@@ -1,9 +1,13 @@
-15538	Yeung	Athletics	111
-15578	Pacie	Elec. Eng.	32
-10838	Marlet	Accounting	91
-11578	Kwan	Languages	37
-12078	Knutson	Languages	97
-18338	Kangs	Physics	9
-15698	Dink	Psychology	72
-19638	Dawson	Cybernetics	107
-1018	Colin	Civil Eng.	81
+16035	Starker	English	94
+11095	Schultz	Languages	51
+18752	Schulman	Civil Eng.	102
+11057	Robinson	Marketing	120
+11076	Prasad	Pol. Sci.	114
+11855	Mendelzon	Languages	114
+15883	Marques	Math	24
+16453	Kanata	Astronomy	78
+1367	Ignj	Math	69
+12216	Griffiths	Cybernetics	94
+18809	Benson	Marketing	20
+11152	Al-Tahat	English	87
+12615	Tewari	Geology	40

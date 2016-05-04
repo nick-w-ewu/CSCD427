@@ -1,16 +1,11 @@
-11237	Rokhs	Physics	5
-11057	Robinson	Marketing	120
-17377	Pisini	English	67
-10917	Morales	Cybernetics	54
-13217	Liu	Athletics	95
-11377	Jr	Accounting	100
-17997	Ishikawa	Languages	128
-19917	Hayrapetyan	Languages	121
-17397	Caleff	Languages	31
-13757	Bedny	Astronomy	3
-15457	Arinb	Physics	123
-15517	Anis	Geology	29
-16057	Wicki	Mech. Eng.	114
-17057	Swartj	Geology	94
-1737	Shinagawa	Biology	118
-16297	Sacchi	Marketing	44
+18808	Snif	Mech. Eng.	116
+1727	Ratcliff	Mech. Eng.	49
+11455	Peyse	Athletics	18
+15578	Pacie	Elec. Eng.	32
+14628	Lehtinen	Psychology	47
+10904	Jerns	History	21
+18941	Denecker	History	46
+19321	Chang	Mech. Eng.	124
+19245	Cai	Comp. Sci.	4
+18675	Araya	Statistics	82
+16528	Angs	Accounting	24
