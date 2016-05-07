@@ -26,6 +26,11 @@ public class Take implements Comparable<Take>
         return this.id + "\t" + this.course_id + "\t" + this.sec_id + "\t" + this.semester + "\t" + this.year + "\t" + this.grade;
     }
 
+    public String toStringJoined()
+    {
+        return this.course_id + "\t" + this.sec_id + "\t" + this.semester + "\t" + this.year + "\t" + this.grade;
+    }
+
     public int compareTo(Take that)
     {
         if(this.id == that.id)
@@ -33,5 +38,19 @@ public class Take implements Comparable<Take>
             return this.year - that.year;
         }
         return this.id - that.id;
+    }
+
+    public boolean equals(Object o)
+    {
+        if(o.getClass().getSimpleName().equals("Take"))
+        {
+            Take that = (Take)o;
+            if(this.id == that.id && this.course_id.equals(that.course_id) && this.sec_id.equals(that.sec_id)
+                    && this.semester.equals(that.semester) && this.year == that.year && this.grade.equals(that.grade))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

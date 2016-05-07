@@ -1,0 +1,244 @@
+107	Shabuno	Math	19
+108	Dhav	Biology	80
+123	Wingb	Civil Eng.	86
+163	Bandekar	Finance	49
+1000	Manber	Civil Eng.	39
+1018	Colin	Civil Eng.	81
+1080	Xue	Languages	94
+1087	Roses	Accounting	73
+1110	Tzeng	Civil Eng.	23
+1220	Hito	Geology	42
+1232	Marcus	Marketing	110
+1285	Szczerban	Pol. Sci.	97
+1367	Ignj	Math	69
+1402	Oswald	Comp. Sci.	12
+1460	Martinsen	History	55
+1533	She	Statistics	29
+1726	Matsunami	Biology	94
+1727	Ratcliff	Mech. Eng.	49
+1737	Shinagawa	Biology	118
+1812	Chyr	Marketing	47
+1826	Dhav	Astronomy	8
+1827	Westbrook	Civil Eng.	61
+1836	Marinov	Elec. Eng.	85
+1884	Masini	Marketing	89
+1922	Cavalcanti	Athletics	48
+1954	Frank	Geology	29
+1968	Sahm	Finance	4
+10033	Zelty	Mech. Eng.	60
+10076	Duan	Civil Eng.	105
+10204	Mediratta	Geology	112
+10267	Rzecz	Comp. Sci.	5
+10269	Hilberg	Psychology	75
+10454	Ugarte	Pol. Sci.	120
+10481	Grosch	Astronomy	39
+10527	Kieras	Physics	128
+10556	Reed	English	79
+10663	Okaf	Geology	59
+10693	Zabary	Statistics	111
+10705	Terauchi	Physics	48
+10727	Allard	Physics	27
+10736	Veselovsky	Elec. Eng.	62
+10814	Waks	Elec. Eng.	56
+10834	More	Geology	126
+10838	Marlet	Accounting	91
+10904	Jerns	History	21
+10917	Morales	Cybernetics	54
+11055	Arnoux	Geology	121
+11057	Robinson	Marketing	120
+11076	Prasad	Pol. Sci.	114
+11083	Kerridge	Statistics	113
+11095	Schultz	Languages	51
+11101	Glaho	Cybernetics	119
+11126	Englund	Pol. Sci.	76
+11152	Al-Tahat	English	87
+11194	El-Helw	Pol. Sci.	71
+11195	Shiang	Cybernetics	62
+11201	Bianchi	Statistics	0
+11202	Heckman	Math	120
+11237	Rokhs	Physics	5
+11262	Foels	Marketing	117
+11377	Jr	Accounting	100
+11419	Geronimo	Civil Eng.	66
+11422	Saito	Physics	34
+11441	Betho	Languages	36
+11453	Yamashita	Astronomy	109
+11455	Peyse	Athletics	18
+11510	Rakoj	Mech. Eng.	37
+11530	Ng	Marketing	92
+11578	Kwan	Languages	37
+11604	Neff	Pol. Sci.	39
+11682	Juol	Athletics	126
+11855	Mendelzon	Languages	114
+11966	Kowe	Math	69
+12069	Skeen	History	10
+12078	Knutson	Languages	97
+12173	Thimm	English	60
+12214	Morales	Languages	51
+12216	Griffiths	Cybernetics	94
+12236	Bricker	Accounting	116
+12326	Watson	Finance	50
+12362	Zhanr	Civil Eng.	115
+12563	Stone	Marketing	66
+12615	Tewari	Geology	40
+12666	Power	Athletics	118
+12683	Sin	Accounting	115
+12711	Malagoli	Physics	97
+12941	Ren	Marketing	76
+12971	Bumbau	Elec. Eng.	47
+12979	Hammond	Elec. Eng.	5
+13023	Serrano	Marketing	108
+13028	Okano	Geology	89
+13081	Alqui	Languages	112
+13211	Diab	Civil Eng.	66
+13217	Liu	Athletics	95
+13290	Bonatto	Biology	83
+13352	Gorsky	Athletics	53
+13365	Wolter	Mech. Eng.	55
+13403	Latour	English	82
+13408	Bromley	Elec. Eng.	81
+13495	Srini	Pol. Sci.	34
+13504	Zander	Astronomy	90
+13506	Patrick	Physics	85
+13511	Adam	Cybernetics	15
+13741	Grieng	Psychology	122
+13749	Alfaro	Marketing	23
+13753	Hoshi	Civil Eng.	68
+13757	Bedny	Astronomy	3
+13826	Sommerfeldt	Pol. Sci.	80
+13880	Lazos	Physics	98
+13921	Berger	Math	120
+14023	Deshpande	History	90
+14032	Belhadji	Elec. Eng.	0
+14065	Starker	History	7
+14094	Miao	Comp. Sci.	45
+14182	Moszkowski	Civil Eng.	73
+14214	Yoneda	Cybernetics	129
+14284	Takeshi	Athletics	32
+14432	Whitley	Geology	2
+14484	Langer	Astronomy	62
+14499	Axte	Biology	115
+14554	Ramadan	Psychology	96
+14563	Haigh	Comp. Sci.	16
+14581	Vagn	Biology	129
+14596	Vekk	Biology	105
+14621	Azevedo	Astronomy	17
+14628	Lehtinen	Psychology	47
+14639	Sagiv	Mech. Eng.	26
+14668	Malinen	Athletics	20
+14829	Philippe	Accounting	105
+14869	Palmer	Astronomy	106
+14874	Singhal	Comp. Sci.	34
+15024	Kawahara	Civil Eng.	10
+15030	Massour	Mech. Eng.	44
+15070	Enokib	Math	65
+15074	Kirtane	Physics	36
+15083	Formisano	Physics	50
+15086	Sun	Physics	74
+15144	Lapio	Statistics	110
+15249	Cheah	Accounting	1
+15283	Williams	Astronomy	0
+15328	Chien	Statistics	129
+15340	Silbert	Psychology	39
+15430	Sasso	Psychology	39
+15457	Arinb	Physics	123
+15487	Januszewski	Athletics	14
+15517	Anis	Geology	29
+15538	Yeung	Athletics	111
+15578	Pacie	Elec. Eng.	32
+15613	Umehara	Marketing	41
+15698	Dink	Psychology	72
+15726	Neuhold	Finance	27
+15883	Marques	Math	24
+15980	Ross	Athletics	81
+16035	Starker	English	94
+16057	Wicki	Mech. Eng.	114
+16075	Wolter	Pol. Sci.	45
+16133	Orlet	Cybernetics	43
+16250	Uhrig	English	87
+16297	Sacchi	Marketing	44
+16311	Liao	Accounting	33
+16347	Morimoto	Mech. Eng.	2
+16405	Rahman	Languages	5
+16453	Kanata	Astronomy	78
+16467	Meyl	Comp. Sci.	92
+16480	Noga	Psychology	5
+16515	Suppan	Languages	48
+16523	Redw	Math	117
+16528	Angs	Accounting	24
+16543	Toffoli	History	83
+16593	Skuras	Psychology	5
+16631	Stratulat	Biology	20
+16753	Kuwadak	Comp. Sci.	67
+16849	Kantors	Geology	117
+16885	Biehl	Math	59
+16907	Keiss	Accounting	59
+16969	Hakkinen	Finance	70
+16993	Akaiw	Accounting	82
+17057	Swartj	Geology	94
+17076	King	Statistics	42
+17086	Hazemi	Math	90
+17128	Chuon	Civil Eng.	81
+17133	Kang	Civil Eng.	109
+17192	Carroll	Pol. Sci.	75
+17207	Holn	Astronomy	57
+17339	Petzo	English	58
+17377	Pisini	English	67
+17397	Caleff	Languages	31
+17424	Zouao	English	75
+17507	Mathur	Mech. Eng.	48
+17600	Peter	Languages	47
+17607	Ould	Athletics	115
+17665	Tewari	English	62
+17676	Michel	Psychology	43
+17769	Pearlman	Biology	45
+17831	Srivastava	Languages	75
+17911	Audeh	Biology	92
+17924	Tavan	Psychology	97
+17944	Hamarn	Mech. Eng.	5
+17996	Karpist	Finance	103
+17997	Ishikawa	Languages	128
+18007	Chanon	Biology	90
+18108	Brailsford	Cybernetics	107
+18234	Nirenbu	Pol. Sci.	19
+18286	Pang	Finance	110
+18338	Kangs	Physics	9
+18367	Goodwin	Civil Eng.	95
+18469	Coppens	Marketing	26
+18499	Peter	Biology	21
+18554	Ramaswamy	Psychology	21
+18583	Ma	Finance	74
+18636	Mori	Statistics	23
+18675	Araya	Statistics	82
+18709	Agar	Math	65
+18740	Williamson	Athletics	16
+18752	Schulman	Civil Eng.	102
+18775	Pampal	Comp. Sci.	89
+18808	Snif	Mech. Eng.	116
+18809	Benson	Marketing	20
+18821	Linden	Astronomy	98
+18859	Rubio	English	21
+18941	Denecker	History	46
+19048	Leuen	Statistics	122
+19050	Erdem	Civil Eng.	58
+19203	Koch	Physics	88
+19220	Hayashi	History	77
+19245	Cai	Comp. Sci.	4
+19293	Singhal	Geology	118
+19321	Chang	Mech. Eng.	124
+19342	Bouzeghoub	Finance	35
+19362	Linden	Finance	123
+19450	Asahara	Cybernetics	37
+19536	Bhattacharya	Math	92
+19541	Drews	Marketing	1
+19582	Canas	Finance	7
+19603	Colu	Finance	122
+19638	Dawson	Cybernetics	107
+19735	Bishop	Physics	9
+19766	Simon	Biology	29
+19791	Vanrell	Comp. Sci.	61
+19824	Savelieva	Physics	7
+19848	Tiwari	Comp. Sci.	96
+19861	Fontana	Civil Eng.	81
+19862	Prasad	Pol. Sci.	22
+19917	Hayrapetyan	Languages	121

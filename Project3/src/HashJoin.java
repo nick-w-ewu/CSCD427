@@ -16,7 +16,7 @@ public class HashJoin
     {
         this.blockSize = b;
         this.numBuckets = m-1;
-        PrintWriter out = new PrintWriter(new File("files/hj.txt"));
+        PrintWriter out = new PrintWriter(new File("files/hashjoin/hj.txt"));
         out.close();
     }
 
@@ -85,7 +85,7 @@ public class HashJoin
     {
         HashTbl<Student> build = new HashTbl<>(null, blockSize, numBuckets, true);
         String temp;
-        Scanner input = new Scanner(new File("files/hj_student_" + buildIndex + ".txt"));
+        Scanner input = new Scanner(new File("files/hashjoin/hj_student_" + buildIndex + ".txt"));
         Student[] students = new Student[blockSize];
         while(input.hasNext())
         {
@@ -106,7 +106,7 @@ public class HashJoin
             hashStudentBlock(students, build);
             students = new Student[blockSize];
         }
-        Scanner input2 = new Scanner(new File("files/hj_takes_" + probeIndex + ".txt"));
+        Scanner input2 = new Scanner(new File("files/hashjoin/hj_takes_" + probeIndex + ".txt"));
         Take[] takes = new Take[blockSize];
         while(input2.hasNext())
         {
@@ -170,14 +170,14 @@ public class HashJoin
             writeBuffer();
             this.outputBuffer = new ArrayList<>();
         }
-        this.outputBuffer.add(s.toString() + "\t" + take.toString());
+        this.outputBuffer.add(s.toString() + "\t" + take.toStringJoined());
     }
 
     private void writeBuffer()
     {
         try
         {
-            FileWriter fw = new FileWriter(new File("files/hj.txt"), true);
+            FileWriter fw = new FileWriter(new File("files/hashjoin/hj.txt"), true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter writer = new PrintWriter(bw);
             for (String s : this.outputBuffer)

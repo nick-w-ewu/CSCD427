@@ -29,7 +29,7 @@ public class HashTbl<E>
             PrintWriter out;
             for (int i = 0; i < numBuckets; i++)
             {
-                out = new PrintWriter(new File("files/" + filePrefix + "_" + i + ".txt"));
+                out = new PrintWriter(new File("files/hashjoin/" + filePrefix + "_" + i + ".txt"));
                 out.close();
             }
         }
@@ -53,7 +53,7 @@ public class HashTbl<E>
     {
         try
         {
-            FileWriter fw = new FileWriter(new File("files/" + filePrefix + "_" + index + ".txt"), true);
+            FileWriter fw = new FileWriter(new File("files/hashjoin/" + filePrefix + "_" + index + ".txt"), true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter writer = new PrintWriter(bw);
             for (E e : this.mappings[index])

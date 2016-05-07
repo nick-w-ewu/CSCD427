@@ -34,4 +34,18 @@ public class Student implements Comparable<Student>
     {
         return this.id - that.id;
     }
+
+    public boolean equals(Object o)
+    {
+        if(o.getClass().getSimpleName().equals("Student"))
+        {
+            Student that = (Student)o;
+            if(this.id == that.id && this.name.equals(that.name) && this.department.equals(that.department) &&
+                    this.credits.equals(that.credits))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
